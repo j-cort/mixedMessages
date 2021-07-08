@@ -1,3 +1,5 @@
+// Random future path generator: predicts future domicile, occupation and state of mind.
+
 // random number generator
 const getRandomNumber = arr => {
     return Math.floor(Math.random()*arr.length);
