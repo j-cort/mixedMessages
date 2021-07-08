@@ -1,17 +1,3 @@
-/*
-Random numbers up to array length -1
-
-
-City : ['Tokyo,' 'London,' 'Accra,' 'Casa Blanca,' 'Caracas,' 'Ohio,' 'Montreal,' 'Mumbai,' 'Da Nang,' 'Brisbane']
-Occupation : ['a fisherman', 'a software developer', 'a biomedical researcher', 'a dancer', 'a film director', 'a teacher', 'a train driver', 'an accountant,' 'a surgeon', 'a hobo']
-State : ['happy', 'healthy', 'miserable', 'at peace', 'joyful', 'resentful', 'unsatisfied', 'unstable', 'comfortable', 'curious', 'furious', 'proud', 'worshipped', 'greedy', 'generous', 'humble', 'adventurous', 'unstoppable', 'lazy']
-
-
-Push option to new array
-
-*
-*/
-
 // random number generator
 const getRandomNumber = arr => {
     return Math.floor(Math.random()*arr.length)
