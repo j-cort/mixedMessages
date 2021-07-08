@@ -1,6 +1,6 @@
 // random number generator
 const getRandomNumber = arr => {
-    return Math.floor(Math.random()*arr.length)
+    return Math.floor(Math.random()*arr.length);
 };
 
 // mixed message source object
@@ -11,22 +11,17 @@ const mm = {
 };
 
 // generate mixed message
-const generateMixedMessage = () => {
+const generateMixedMessage = obj => {
     let message = [];
-    for (let prop in mm) {
-        const opIndex = getRandomNumber(mm[prop])
-        if (prop === 'city') {
-            message.push(`You will live in ${mm[prop][opIndex]}.`)
-        } else if (prop === 'occupation') {
-            message.push(`You will be ${mm[prop][opIndex]}.`)
-        } else {
-            message.push(`You'll be ${mm[prop][opIndex]}.`)
-        }
-    }
-    return message.join('\n')
-};
-
+    for (let prop in obj) {
+        const index = getRandomNumber(obj[prop])
+        prop === 'city' ? message.push(`You will live in ${obj[prop][index]}.`)
+        : prop === 'occupation' ? message.push(`You will be ${obj[prop][index]}.`)
+        : message.push(`You'll be ${obj[prop][index]}.`)
+        };
+        return message.join('\n')
+    };
+    
 
 // Display Mixed Message
-const mixedMessage = generateMixedMessage();
-console.log(mixedMessage)
+console.log(generateMixedMessage(mm));
